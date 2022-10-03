@@ -134,5 +134,13 @@ example:
 
   `yarn start -f 4240705 -a 0x2c974b2d0ba1716e644c1fc59982a89ddd2ff724 -n "http://localhost:8545" -l "info" -q`
 
+Another solution is to use the Docker image:
+
+```
+docker run -it --rm -v $PWD/contracts:/app/contracts devopstestlab/smart-contract-watch -a <contract-address> -n https://mainnet.infura.io/v3/<infura-key> -l debug -q -f <from-block-number>
+```
+
+The ABI json file of the smart contract should be stored in the `contracts` directory with the name `<contract-address>.json`.
+
 ### Tests
 `yarn test`
