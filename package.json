@@ -9,6 +9,7 @@
   "scripts": {
     "build": "./node_modules/.bin/babel ./src --experimental --source-maps-inline -d ./dist",
     "start": "./node_modules/.bin/babel  ./src --experimental --source-maps-inline -d ./dist && node ./dist ",
+    "run": "node ./dist",
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "test": "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register 'test/**/*.spec.js?(x)'",
