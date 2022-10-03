@@ -6,5 +6,4 @@ COPY package.json /app
 RUN yarn
 COPY . /app
 RUN yarn build
-WORKDIR /app/dist
-ENTRYPOINT ["node", "."]
+ENTRYPOINT ["node", "./dist"]
